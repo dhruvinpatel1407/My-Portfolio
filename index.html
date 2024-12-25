@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DB PATEL</title>
+    <!-- link for css file -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <!-- link for icons   -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- link for typed js  -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- link for carousel  -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header>
+      <div
+        class="fixed top-0 left-0 w-full py-5 px-8 bg-[#051129] flex justify-between items-center z-50"
+      >
+        <!-- logo  -->
+        <a
+          href="#"
+          class="logo text-2xl font-semibold text-white opacity-0 animate-[SlideRight_1s_ease_forwards]"
+          >DB. PATEL</a
+        >
+
+        <!-- Desktop Navbar -->
+        <nav class="hidden lg:flex space-x-8">
+          <a
+            href="#home"
+            class="text-white text-xl font-medium opacity-0 animate-[SlideTop_0.5s_ease_forwards] animation-delay-[calc(0.2s*1)] hover:text-[#0ef]"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="text-white text-xl font-medium opacity-0 animate-[SlideTop_0.5s_ease_forwards] animation-delay-[calc(0.2s*2)] hover:text-[#0ef]"
+            >About</a
+          >
+          <a
+            href="#skill"
+            class="text-white text-xl font-medium opacity-0 animate-[SlideTop_0.5s_ease_forwards] animation-delay-[calc(0.2s*3)] hover:text-[#0ef]"
+            >Skill</a
+          >
+          <a
+            href="#projects"
+            class="text-white text-xl font-medium opacity-0 animate-[SlideTop_0.5s_ease_forwards] animation-delay-[calc(0.2s*4)] hover:text-[#0ef]"
+            >Projects</a
+          >
+          <a
+            href="#certificate"
+            class="text-white text-xl font-medium opacity-0 animate-[SlideTop_0.5s_ease_forwards] animation-delay-[calc(0.2s*5)] hover:text-[#0ef]"
+            >Certifications</a
+          >
+          <a
+            href="#contact"
+            class="text-white text-xl font-medium opacity-0 animate-[SlideTop_0.5s_ease_forwards] animation-delay-[calc(0.2s*6)] hover:text-[#0ef]"
+            >Contact</a
+          >
+        </nav>
+
+        <!-- Hamburger Button for Mobile -->
+        <button id="hamburger" class="lg:hidden text-white focus:outline-none">
+          <div class="w-10 h-8 flex flex-col justify-between cursor-pointer">
+            <span class="block w-full h-1 bg-[#00eeff]"></span>
+            <span class="block w-full h-1 bg-[#00eeff]"></span>
+            <span class="block w-full h-1 bg-[#00eeff]"></span>
+            <span class="block w-3/5 h-1 bg-[#00eeff]"></span>
+          </div>
+        </button>
+      </div>
+
+      <!-- Side Menu for Mobile -->
+      <div
+        id="side-menu"
+        class="fixed z-10 inset-0 bg-gray-800 bg-opacity-75 transform -translate-x-full transition-transform duration-300 ease-in-out p-6 lg:hidden"
+      >
+        <nav class="flex flex-col text-center space-y-6 mt-16">
+          <a
+            href="#home"
+            class="text-white text-2xl font-medium hover:text-[#0ef]"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="text-white text-2xl font-medium hover:text-[#0ef]"
+            >About</a
+          >
+          <a
+            href="#skill"
+            class="text-white text-2xl font-medium hover:text-[#0ef]"
+            >Skill</a
+          >
+          <a
+            href="#projects"
+            class="text-white text-2xl font-medium hover:text-[#0ef]"
+            >Projects</a
+          >
+          <a
+            href="#certificate"
+            class="text-white text-2xl font-medium hover:text-[#0ef]"
+            >Certifications</a
+          >
+          <a
+            href="#contact"
+            class="text-white text-2xl font-medium hover:text-[#0ef]"
+            >Contact</a
+          >
+        </nav>
+      </div>
+    </header>
+    <main>
+      <!-- section 1 Home section  -->
+      <section
+        class="home h-full lg:h-screen flex mt-0 md:mt-8 lg:items-center md:bg-contain lg:bg-center bg-no-repeat bg-cover bg-[#081b29] md:bg-[url('./images/home-img.png')]"
+        id="home"
+      >
+        <div class="sm:flex sm:flex-col">
+          <div class="md:hidden">
+            <img src="./images/about-img.png" alt="" />
+          </div>
+
+          <div class="home-content max-w-[600px]">
+            <h3 class="text-2xl lg:text-3xl font-bold opacity-0">
+              Hello, It's me
+            </h3>
+            <h1 class="md:text-5xl sm:text-3xl font-bold mt-2 mb-4 opacity-0">
+              Dhruvin Patel
+            </h1>
+            <h3
+              class="text-xl md:text-2xl lg:text-3xl font-semibold mb-6 opacity-0"
+            >
+              And I'm a <span class="text text-cyan-500"></span>
+            </h3>
+            <p class="text-lg opacity-0">
+              I'm a web Developer with extensive experience
+              <br class="hidden md:block lg:hidden" />
+              for over 6 months. <br class="hidden md:block" />expertise is to
+              create build websites with react Js
+            </p>
+            <div class="home-sci">
+              <a href="#" style="--i: 7"><i class="bx bxl-gmail"></i></a>
+              <a href="#" style="--i: 8"><i class="bx bxl-twitter"></i></a>
+              <a href="#" style="--i: 9"><i class="bx bxl-linkedin"></i></a>
+              <a href="#" style="--i: 10"><i class="bx bxl-github"></i></a>
+            </div>
+            <a href="#" class="btn-box">Download CV</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- section 2 About  -->
+      <section id="about">
+        <h2
+          class="text-center font-bold text-3xl md:text-4xl lg:text-[60px] mt-20"
+        >
+          About <span class="text-[#00eeff]">Me</span>
+        </h2>
+        <div class="about grid grid-cols-1 lg:grid-cols-2 gap-6 py-12">
+          <!-- About Image -->
+          <div class="about-img lg:block hidden">
+            <img
+              src="./images/about-img.png"
+              class="max-w-[630px] h-auto w-full rounded-lg pb-[20%]"
+            />
+          </div>
+
+          <!-- About Text Section -->
+          <div class="about-text lg:px-0 px-16">
+            <h4 class="text-3xl font-semibold text-white mt-4 mb-8">
+              Full Stack Developer
+            </h4>
+            <p class="text-lg text-emerald-100 leading-relaxed mb-16 lg:pe-4">
+              I am currently enrolled in a Full Stack Web Development course,
+              where I have gained comprehensive knowledge of both front-end and
+              back-end technologies. Through this course, I have learned to work
+              with languages such as HTML, CSS, JavaScript, and frameworks like
+              React and Node.js. I have also developed a strong understanding of
+              databases like MongoDB and MySQL, as well as version control
+              systems like Git. My hands-on projects have allowed me to build
+              dynamic, user-friendly websites and applications, enhancing my
+              problem-solving skills and technical expertise. I am passionate
+              about coding and eager to apply my knowledge in a real-world
+              setting. I am now looking for an opportunity to kickstart my
+              career as a Full Stack Web Developer, where I can continue to
+              learn, grow, and contribute to the success of a team.
+            </p>
+            <a href="#" class="btn-box"> More About Me </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- section 3 skill  -->
+      <section id="skill" class="mb-4">
+        <h1
+          class="text-center mb-8 font-bold text-3xl md:text-4xl lg:text-[60px]"
+        >
+          My <span class="text-[#00eeff]">Skills</span>
+        </h1>
+        <div
+          class="skill-section flex flex-nowrap justify-between lg:grid lg:grid-cols-2 overflow-x-hidden overflow-y-hidden"
+        >
+          <!-- Technical Skills Section -->
+          <div class="container1 bg-gray-800 p-6 rounded-lg me-4 shadow-md">
+            <h1 class="heading1 text-2xl text-center underline mb-6">
+              Technical Skills
+            </h1>
+            <div class="Technical-bars">
+              <div class="bar flex items-center space-x-4 mb-6">
+                <i class="bx bxl-html5 text-orange-500 text-3xl"></i>
+                <div class="info">
+                  <span>HTML</span>
+                </div>
+                <div class="progress-line html rounded-full">
+                  <span class="rounded-full"></span>
+                </div>
+              </div>
+              <div class="bar flex items-center space-x-4 mb-6">
+                <i class="bx bxl-css3 text-blue-500 text-3xl"></i>
+                <div class="info">
+                  <span>CSS</span>
+                </div>
+                <div class="progress-line css rounded-full">
+                  <span class="rounded-full"></span>
+                </div>
+              </div>
+              <div class="bar flex items-center space-x-4 mb-6">
+                <i class="bx bxl-javascript text-yellow-500 text-3xl"></i>
+                <div class="info">
+                  <span>JavaScript</span>
+                </div>
+                <div class="progress-line javascript rounded-full">
+                  <span class="rounded-full"></span>
+                </div>
+              </div>
+              <div class="bar flex items-center space-x-4 mb-6">
+                <i class="bx bxl-react text-cyan-500 text-3xl"></i>
+                <div class="info">
+                  <span>ReactJS</span>
+                </div>
+                <div class="progress-line react rounded-full">
+                  <span class="rounded-full"></span>
+                </div>
+              </div>
+              <div class="bar flex items-center space-x-4 mb-6">
+                <i class="bx bxl-redux text-blue-500 text-3xl"></i>
+                <div class="info">
+                  <span>Redux</span>
+                </div>
+                <div class="progress-line redux rounded-full">
+                  <span class="rounded-full"></span>
+                </div>
+              </div>
+              <div class="bar flex items-center space-x-4 mb-6">
+                <i class="bx bxl-redux text-blue-500 text-3xl"></i>
+                <div class="info">
+                  <span>NextJS</span>
+                </div>
+                <div class="progress-line next rounded-full">
+                  <span class="rounded-full"></span>
+                </div>
+              </div>
+              <div class="bar flex items-center space-x-4 mb-6">
+                <i class="bx bxl-github text-blue-500 text-3xl"></i>
+                <div class="info">
+                  <span>Git-Hub</span>
+                </div>
+                <div class="progress-line github rounded-full">
+                  <span class="rounded-full"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Professional Skills Section -->
+          <div
+            class="container1 bg-gray-800 p-6 rounded-lg shadow-md mt-10px me-4 lg:mt-0"
+          >
+            <h1 class="heading1 text-2xl underline mb-6">
+              Professional Skills
+            </h1>
+            <!-- radial bars  -->
+            <div class="radial-bars">
+              <div class="radial-bar">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                  <circle
+                    class="progress-bar stroke-black"
+                    cx="100"
+                    cy="100"
+                    r="80"
+                  ></circle>
+                  <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">90%</div>
+                <div class="text ms-4">Creativity</div>
+              </div>
+              <div class="radial-bar">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                  <circle
+                    class="progress-bar stroke-black"
+                    cx="100"
+                    cy="100"
+                    r="80"
+                  ></circle>
+                  <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">65%</div>
+                <div class="text">Communication</div>
+              </div>
+              <div class="radial-bar">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                  <circle
+                    class="progress-bar stroke-black"
+                    cx="100"
+                    cy="100"
+                    r="80"
+                  ></circle>
+                  <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">75%</div>
+                <div class="text">Problem Solving</div>
+              </div>
+              <div class="radial-bar">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                  <circle
+                    class="progress-bar stroke-black"
+                    cx="100"
+                    cy="100"
+                    r="80"
+                  ></circle>
+                  <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">85%</div>
+                <div class="text ms-4">Teamwork</div>
+              </div>
+              <div class="radial-bar">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                  <circle
+                    class="progress-bar stroke-black"
+                    cx="100"
+                    cy="100"
+                    r="80"
+                  ></circle>
+                  <circle class="path path-5" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">65%</div>
+                <div class="text ms-6">Coding</div>
+              </div>
+              <div class="radial-bar">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                  <circle
+                    class="progress-bar stroke-black"
+                    cx="100"
+                    cy="100"
+                    r="80"
+                  ></circle>
+                  <circle class="path path-6" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">70%</div>
+                <div class="text ms-8">DSA</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- section 4 Projects -->
+      <section id="projects">
+        <div class="projects">
+          <h1 class="text-[60px] text-center mt-12">
+            Latest <span class="text-[#0ef]">Project</span>
+          </h1>
+          <div class="container3 p-5">
+            <div class="projects-list">
+              <div>
+                <i class="bx bxl-tailwind-css text-[#00eeff] text-5xl mb-6"></i>
+                <h2 class="text-3xl font-medium mb-4">Energico</h2>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero
+                  quae error, tempore amet nesciunt nulla neque aperiam
+                  laboriosam facere voluptate maxime asperiores tenetur cumque
+                  perspiciatis impedit! Quod repudiandae exercitationem quis at
+                  tenetur voluptate dignissimos eius obcaecati neque fugit esse
+                  itaque illo hic facilis soluta, quaerat assumenda. Molestias,
+                  eaque! Nihil, nesciunt!
+                </p>
+                <a href="#" class="read me-12">Git-Hub Link</a>
+                <a href="#" class="read">Live Link</a>
+              </div>
+
+              <div>
+                <i class="bx bxl-tailwind-css text-[#00eeff] text-5xl mb-6"></i>
+                <h2 class="text-3xl font-medium mb-4">Energico</h2>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero
+                  quae error, tempore amet nesciunt nulla neque aperiam
+                  laboriosam facere voluptate maxime asperiores tenetur cumque
+                  perspiciatis impedit! Quod repudiandae exercitationem quis at
+                  tenetur voluptate dignissimos eius obcaecati neque fugit esse
+                  itaque illo hic facilis soluta, quaerat assumenda. Molestias,
+                  eaque! Nihil, nesciunt!
+                </p>
+                <a href="#" class="read me-12">Git-Hub Link</a>
+                <a href="#" class="read">Live Link</a>
+              </div>
+
+              <div>
+                <i class="bx bxl-tailwind-css text-[#00eeff] text-5xl mb-6"></i>
+                <h2 class="text-3xl font-medium mb-4">Energico</h2>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero
+                  quae error, tempore amet nesciunt nulla neque aperiam
+                  laboriosam facere voluptate maxime asperiores tenetur cumque
+                  perspiciatis impedit! Quod repudiandae exercitationem quis at
+                  tenetur voluptate dignissimos eius obcaecati neque fugit esse
+                  itaque illo hic facilis soluta, quaerat assumenda. Molestias,
+                  eaque! Nihil, nesciunt!
+                </p>
+                <a href="#" class="read me-12">Git-Hub Link</a>
+                <a href="#" class="read">Live Link</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- section 5 certificates  -->
+      <section class="p-4" id="certificate">
+        <div class="certifications py-10">
+          <div class="main-text text-center">
+            <h2 class="text-[60px] text-center my-8">
+              My <span class="text-[#0ef]">Certifications</span>
+            </h2>
+            <div class="certificate-content relative m-4 md:m-8 lg:m-12">
+              <!-- Carousel Wrapper -->
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <!-- Certificate 1 Card -->
+                  <div
+                    class="swiper-slide group overflow-hidden rounded-lg cursor-pointer"
+                  >
+                    <img
+                      src="./images/certificate.PNG"
+                      alt="certificate"
+                      class="w-full h-auto transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div
+                      class="layer absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-t from-cyan-400 via-cyan-200 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-4"
+                    >
+                      <h5 class="text-black text-xl font-semibold mb-4">
+                        JavaScript
+                      </h5>
+                      <p class="text-black text-sm mb-4">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Tenetur vero sapiente itaque cupiditate.
+                      </p>
+                      <a
+                        href="#"
+                        class="bg-white rounded-full w-12 h-12 flex items-center justify-center text-pink-500 hover:bg-pink-500 hover:text-white transition"
+                      >
+                        <i class="bx bx-link-external text-2xl"></i>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Certificate 2 Card -->
+                  <div
+                    class="swiper-slide group overflow-hidden rounded-lg cursor-pointer"
+                  >
+                    <img
+                      src="./images/certificate.PNG"
+                      alt="certificate"
+                      class="w-full h-auto transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div
+                      class="layer absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-t from-cyan-400 via-cyan-200 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-4"
+                    >
+                      <h5 class="text-black text-xl font-semibold mb-4">
+                        JavaScript
+                      </h5>
+                      <p class="text-black text-sm mb-4">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Tenetur vero sapiente itaque cupiditate.
+                      </p>
+                      <a
+                        href="#"
+                        class="bg-white rounded-full w-12 h-12 flex items-center justify-center text-pink-500 hover:bg-pink-500 hover:text-white transition"
+                      >
+                        <i class="bx bx-link-external text-2xl"></i>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Certificate 3 Card -->
+                  <div
+                    class="swiper-slide group overflow-hidden rounded-lg cursor-pointer"
+                  >
+                    <img
+                      src="./images/certificate.PNG"
+                      alt="certificate"
+                      class="w-full h-auto transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div
+                      class="layer absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-t from-cyan-400 via-cyan-200 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-4"
+                    >
+                      <h5 class="text-black text-xl font-semibold mb-4">
+                        JavaScript
+                      </h5>
+                      <p class="text-black text-sm mb-4">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Tenetur vero sapiente itaque cupiditate.
+                      </p>
+                      <a
+                        href="#"
+                        class="bg-white rounded-full w-12 h-12 flex items-center justify-center text-pink-500 hover:bg-pink-500 hover:text-white transition"
+                      >
+                        <i class="bx bx-link-external text-2xl"></i>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Certificate 4 Card -->
+                  <div
+                    class="swiper-slide group overflow-hidden rounded-lg cursor-pointer"
+                  >
+                    <img
+                      src="./images/certificate.PNG"
+                      alt="certificate"
+                      class="w-full h-auto transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div
+                      class="layer absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-t from-cyan-400 via-cyan-200 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-4"
+                    >
+                      <h5 class="text-black text-xl font-semibold mb-4">
+                        JavaScript
+                      </h5>
+                      <p class="text-black text-sm mb-4">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Tenetur vero sapiente itaque cupiditate.
+                      </p>
+                      <a
+                        href="#"
+                        class="bg-white rounded-full w-12 h-12 flex items-center justify-center text-pink-500 hover:bg-pink-500 hover:text-white transition"
+                      >
+                        <i class="bx bx-link-external text-2xl"></i>
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Certificate 5 Card -->
+                  <div
+                    class="swiper-slide group overflow-hidden rounded-lg cursor-pointer"
+                  >
+                    <img
+                      src="./images/certificate.PNG"
+                      alt="certificate"
+                      class="w-full h-auto transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div
+                      class="layer absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-t from-cyan-400 via-cyan-200 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-4"
+                    >
+                      <h5 class="text-black text-xl font-semibold mb-4">
+                        JavaScript
+                      </h5>
+                      <p class="text-black text-sm mb-4">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Tenetur vero sapiente itaque cupiditate.
+                      </p>
+                      <a
+                        href="#"
+                        class="bg-white rounded-full w-12 h-12 flex items-center justify-center text-pink-500 hover:bg-pink-500 hover:text-white transition"
+                      >
+                        <i class="bx bx-link-external text-2xl"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- section 6 contact  -->
+      <section
+        class="contact mt-32 px-8 lg:grid lg:grid-cols-2 gap-12"
+        id="contact"
+      >
+        <div class="contact-text">
+          <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center">
+            Contact <span class="text-[#00eeff]">Me</span>
+          </h2>
+          <h4
+            class="text-lg sm:text-xl md:text-2xl text-gray-200 font-semibold mt-4 mb-6"
+          >
+            Let's work together
+          </h4>
+          <p
+            class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-400 mb-6"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sunt
+            dolorum excepturi. Quis, blanditiis architecto!
+          </p>
+          <ul class="contact-list space-y-4 mb-8">
+            <li class="flex items-center space-x-2 text-gray-300">
+              <i class="bx bxs-send"></i>
+              <span>techdhruvinpatel@gmail.com</span>
+            </li>
+            <li class="flex items-center space-x-2 text-gray-300">
+              <i class="bx bxs-phone"></i>
+              <span>+91 96241 06741</span>
+            </li>
+          </ul>
+          <div class="contact-icons flex space-x-4 mt-4">
+            <a href="#" class="icon bg-transparent">
+              <i class="bx bxl-gmail"></i>
+            </a>
+            <a href="#" class="icon bg-transparent">
+              <i class="bx bxl-twitter"></i>
+            </a>
+            <a href="#" class="icon bg-transparent">
+              <i class="bx bxl-linkedin"></i>
+            </a>
+            <a href="#" class="icon bg-transparent">
+              <i class="bx bxl-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <form action="">
+            <input
+              type="text"
+              placeholder="Enter Your Name"
+              required
+              class="input-field"
+            />
+            <input
+              type="email"
+              placeholder="Enter Your Email"
+              required
+              class="input-field"
+            />
+            <input
+              type="text"
+              placeholder="Enter Your Subject"
+              required
+              class="input-field"
+            />
+            <textarea
+              placeholder="Enter Your Message"
+              required
+              class="textarea-field"
+            ></textarea>
+            <input type="submit" value="Submit" class="submit-btn send" />
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="w-full bg-[#051129] text-[#fff] font-medium p-8 mt-12">
+        <div class="text-center text-xl">
+          <h4>DB. PATEL</h4>
+        </div>
+        <div class="text-center text-lg">
+          <p>DB. PATEL &copy; 2024. All rights reserved.</p>
+        </div>
+        <div>
+          <a href="#" class="top"><i class="bx bx-up-arrow-alt"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
