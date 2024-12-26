@@ -22,6 +22,9 @@
     />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
+    <!-- link for EmailJS  -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
@@ -133,10 +136,10 @@
           </div>
 
           <div class="home-content max-w-[600px]">
-            <h3 class="text-2xl lg:text-3xl font-bold opacity-0">
+            <h3 class="text-2xl lg:text-3xl font-medium opacity-0">
               Hello, It's me
             </h3>
-            <h1 class="md:text-5xl sm:text-3xl font-bold mt-2 mb-4 opacity-0">
+            <h1 class="md:text-5xl sm:text-3xl font-semibold mt-2 mb-4 opacity-0">
               Dhruvin Patel
             </h1>
             <h3
@@ -145,16 +148,40 @@
               And I'm a <span class="text text-cyan-500"></span>
             </h3>
             <p class="text-lg opacity-0">
-              I'm a web Developer with extensive experience
-              <br class="hidden md:block lg:hidden" />
-              for over 6 months. <br class="hidden md:block" />expertise is to
-              create build websites with react Js
+              As a web developer with over 6 months of experience, I
+              <br class="hidden md:block" />
+              specialize in crafting interactive and responsive<br
+                class="hidden md:block"
+              />
+              websites using React.js, focused on creating
+              <br class="hidden md:block" />
+              seamless user experiences and efficient functionality.
             </p>
             <div class="home-sci">
-              <a href="#" style="--i: 7"><i class="bx bxl-gmail"></i></a>
-              <a href="#" style="--i: 8"><i class="bx bxl-twitter"></i></a>
-              <a href="#" style="--i: 9"><i class="bx bxl-linkedin"></i></a>
-              <a href="#" style="--i: 10"><i class="bx bxl-github"></i></a>
+              <a
+                href="mailto:techdhruvinpatel@gmail.com"
+                target="_blank"
+                style="--i: 7"
+                ><i class="bx bxl-gmail"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/db._patel_official"
+                target="_blank"
+                style="--i: 8"
+                ><i class="bx bxl-instagram"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/dhruvinpatel1407"
+                target="_blank"
+                style="--i: 9"
+                ><i class="bx bxl-linkedin"></i
+              ></a>
+              <a
+                href="https://github.com/dhruvinpatel1407"
+                target="_blank"
+                style="--i: 10"
+                ><i class="bx bxl-github"></i
+              ></a>
             </div>
             <a href="#" class="btn-box">Download CV</a>
           </div>
@@ -164,40 +191,50 @@
       <!-- section 2 About  -->
       <section id="about">
         <h2
-          class="text-center font-bold text-3xl md:text-4xl lg:text-[60px] mt-20"
+          class="text-center font-medium text-5xl lg:text-[60px] mt-20"
         >
           About <span class="text-[#00eeff]">Me</span>
         </h2>
-        <div class="about grid grid-cols-1 lg:grid-cols-2 gap-6 py-12">
+        <div class="about grid grid-cols-1 lg:grid-cols-2 gap-6">
           <!-- About Image -->
           <div class="about-img lg:block hidden">
             <img
               src="./images/about-img.png"
-              class="max-w-[630px] h-auto w-full rounded-lg pb-[20%]"
+              class="max-w-[630px] h-auto w-full rounded-lg"
             />
           </div>
 
           <!-- About Text Section -->
           <div class="about-text lg:px-0 px-16">
-            <h4 class="text-3xl font-semibold text-white mt-4 mb-8">
+            <h4 class="text-3xl font-medium text-white mt-4 mb-8 lg:pt-16">
               Full Stack Developer
             </h4>
-            <p class="text-lg text-emerald-100 leading-relaxed mb-16 lg:pe-4">
-              I am currently enrolled in a Full Stack Web Development course,
-              where I have gained comprehensive knowledge of both front-end and
-              back-end technologies. Through this course, I have learned to work
-              with languages such as HTML, CSS, JavaScript, and frameworks like
-              React and Node.js. I have also developed a strong understanding of
-              databases like MongoDB and MySQL, as well as version control
-              systems like Git. My hands-on projects have allowed me to build
-              dynamic, user-friendly websites and applications, enhancing my
-              problem-solving skills and technical expertise. I am passionate
-              about coding and eager to apply my knowledge in a real-world
-              setting. I am now looking for an opportunity to kickstart my
-              career as a Full Stack Web Developer, where I can continue to
-              learn, grow, and contribute to the success of a team.
-            </p>
-            <a href="#" class="btn-box"> More About Me </a>
+            <div class="text-lg text-emerald-100 leading-relaxed mb-16 lg:pe-4">
+              <div class="text-container">
+                I am currently enrolled in a Full Stack Web Development course,
+                where I have gained comprehensive knowledge of both front-end
+                and back-end technologies. Through this course, I have learned
+                to work with languages such as HTML, CSS, JavaScript, and
+                frameworks like React and Node.js. I have also developed a
+                strong understanding of databases like MongoDB and MySQL, as
+                well as version control systems like Git. My hands-on projects
+                have allowed me to build dynamic, user-friendly websites and
+                applications, enhancing my problem-solving skills and technical
+                expertise.
+                <span id="moreText" class="hidden text-white">
+                  I am passionate about coding and eager to apply my knowledge
+                  in a real-world setting. I am now looking for an opportunity
+                  to kickstart my career as a Full Stack Web Developer, where I
+                  can continue to learn, grow, and contribute to the success of
+                  a team.</span
+                >
+                <button id="readMoreBtn" class="font-bold text-xl">
+                  Read More ...
+                </button>
+              </div>
+            </div>
+
+            <a href="#contact" class="btn-box"> More About Me </a>
           </div>
         </div>
       </section>
@@ -205,15 +242,15 @@
       <!-- section 3 skill  -->
       <section id="skill" class="mb-4">
         <h1
-          class="text-center mb-8 font-bold text-3xl md:text-4xl lg:text-[60px]"
+          class="text-center mb-8 font-medium text-5xl lg:text-[60px]"
         >
           My <span class="text-[#00eeff]">Skills</span>
         </h1>
         <div
-          class="skill-section flex flex-wrap justify-between lg:grid lg:grid-cols-2 overflow-x-hidden overflow-y-hidden"
+          class="skill-section flex flex-wrap justify-center lg:justify-around overflow-x-hidden overflow-y-hidden"
         >
           <!-- Technical Skills Section -->
-          <div class="container1 bg-gray-800 p-6 rounded-lg me-4 shadow-md">
+          <div class="container1 bg-gray-800 p-6 rounded-lg shadow-md">
             <h1 class="heading1 text-2xl text-center underline mb-6">
               Technical Skills
             </h1>
@@ -273,7 +310,16 @@
                 </div>
               </div>
               <div class="bar flex items-center space-x-4 mb-6">
-                <i class="bx bxl-github text-blue-500 text-3xl"></i>
+                <i class="bx bxl-tailwind-css text-cyan-500 text-3xl"></i>
+                <div class="info">
+                  <span>Tailwind CSS</span>
+                </div>
+                <div class="progress-line tailwind rounded-full">
+                  <span class="rounded-full"></span>
+                </div>
+              </div>
+              <div class="bar flex items-center space-x-4 mb-6">
+                <i class="bx bxl-github text-black text-3xl"></i>
                 <div class="info">
                   <span>Git-Hub</span>
                 </div>
@@ -286,7 +332,7 @@
 
           <!-- Professional Skills Section -->
           <div
-            class="container1 bg-gray-800 p-6 rounded-lg shadow-md mt-10px me-4 lg:mt-0 mt-4"
+            class="container1 bg-gray-800 p-6 rounded-lg shadow-md lg:mt-0 mt-4"
           >
             <h1 class="heading1 text-2xl underline mb-6">
               Professional Skills
@@ -304,7 +350,7 @@
                   <circle class="path path-1" cx="100" cy="100" r="80"></circle>
                 </svg>
                 <div class="percentage">90%</div>
-                <div class="text ms-4">Creativity</div>
+                <div class="text ms-4">Programming</div>
               </div>
               <div class="radial-bar">
                 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -356,7 +402,7 @@
                   <circle class="path path-5" cx="100" cy="100" r="80"></circle>
                 </svg>
                 <div class="percentage">65%</div>
-                <div class="text ms-6">Coding</div>
+                <div class="text ms-6">DSA</div>
               </div>
               <div class="radial-bar">
                 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -369,7 +415,7 @@
                   <circle class="path path-6" cx="100" cy="100" r="80"></circle>
                 </svg>
                 <div class="percentage">70%</div>
-                <div class="text ms-8">DSA</div>
+                <div class="text ms-8">Creativity</div>
               </div>
             </div>
           </div>
@@ -379,7 +425,7 @@
       <!-- section 4 Projects -->
       <section id="projects">
         <div class="projects">
-          <h1 class="text-[60px] text-center mt-12">
+          <h1 class="font-medium text-5xl lg:text-[60px] text-center mt-12">
             Latest <span class="text-[#0ef]">Project</span>
           </h1>
           <div class="container3 p-5">
@@ -387,17 +433,11 @@
               <div>
                 <i class="bx bxl-tailwind-css text-[#00eeff] text-5xl mb-6"></i>
                 <h2 class="text-3xl font-medium mb-4">Energico</h2>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero
-                  quae error, tempore amet nesciunt nulla neque aperiam
-                  laboriosam facere voluptate maxime asperiores tenetur cumque
-                  perspiciatis impedit! Quod repudiandae exercitationem quis at
-                  tenetur voluptate dignissimos eius obcaecati neque fugit esse
-                  itaque illo hic facilis soluta, quaerat assumenda. Molestias,
-                  eaque! Nihil, nesciunt!
+                <p class="text-lg">
+                  A responsive and interactive web application built with HTML, CSS, JavaScript, and Tailwind CSS. It features modern design, smooth transitions, dynamic user interactions, showcasing clean and efficient code with a focus on user experience.
                 </p>
-                <a href="#" class="read me-12">Git-Hub Link</a>
-                <a href="#" class="read">Live Link</a>
+                <a href="https://github.com/dhruvinpatel1407/Tailwind-CSS-Assignment" class="read me-12">Git-Hub Link</a>
+                <a href="https://dhruvinpatel1407.github.io/Tailwind-CSS-Assignment/" class="read">Live Link</a>
               </div>
 
               <div>
@@ -437,10 +477,10 @@
       </section>
 
       <!-- section 5 certificates  -->
-      <section class="p-4" id="certificate">
-        <div class="certifications py-10">
+      <section class="px-4" id="certificate">
+        <div class="certifications ">
           <div class="main-text text-center">
-            <h2 class="text-[60px] text-center my-8">
+            <h2 class="font-medium text-5xl lg:text-[60px] text-center my-8">
               My <span class="text-[#0ef]">Certifications</span>
             </h2>
             <div class="certificate-content relative m-4 md:m-8 lg:m-12">
@@ -452,7 +492,7 @@
                     class="swiper-slide group overflow-hidden rounded-lg cursor-pointer"
                   >
                     <img
-                      src="./images/certificate.PNG"
+                      src="./images/1.png"
                       alt="certificate"
                       class="w-full h-auto transition-transform duration-500 group-hover:scale-110"
                     />
@@ -460,14 +500,13 @@
                       class="layer absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-t from-cyan-400 via-cyan-200 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-4"
                     >
                       <h5 class="text-black text-xl font-semibold mb-4">
-                        JavaScript
+                        Computer Programming
                       </h5>
                       <p class="text-black text-sm mb-4">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing
-                        elit. Tenetur vero sapiente itaque cupiditate.
+                        Completed 'Introduction to Computer Programming with JavaScript,' gaining a solid foundation in programming concepts, syntax, and logic building.
                       </p>
                       <a
-                        href="#"
+                        href="https://verified.sertifier.com/en/verify/69705709798038/"
                         class="bg-white rounded-full w-12 h-12 flex items-center justify-center text-pink-500 hover:bg-pink-500 hover:text-white transition"
                       >
                         <i class="bx bx-link-external text-2xl"></i>
@@ -480,7 +519,7 @@
                     class="swiper-slide group overflow-hidden rounded-lg cursor-pointer"
                   >
                     <img
-                      src="./images/certificate.PNG"
+                      src="./images/2.PNG"
                       alt="certificate"
                       class="w-full h-auto transition-transform duration-500 group-hover:scale-110"
                     />
@@ -488,14 +527,13 @@
                       class="layer absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-t from-cyan-400 via-cyan-200 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-4"
                     >
                       <h5 class="text-black text-xl font-semibold mb-4">
-                        JavaScript
+                        Design & Analysis of Algorithms 
                       </h5>
                       <p class="text-black text-sm mb-4">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing
-                        elit. Tenetur vero sapiente itaque cupiditate.
+                        Proficient in Data Structures and Algorithms, with hands-on experience solving complex problems using efficient algorithms and optimized data structures.
                       </p>
                       <a
-                        href="#"
+                        href="https://verified.sertifier.com/en/verify/37403263118705/"
                         class="bg-white rounded-full w-12 h-12 flex items-center justify-center text-pink-500 hover:bg-pink-500 hover:text-white transition"
                       >
                         <i class="bx bx-link-external text-2xl"></i>
@@ -508,7 +546,7 @@
                     class="swiper-slide group overflow-hidden rounded-lg cursor-pointer"
                   >
                     <img
-                      src="./images/certificate.PNG"
+                      src="./images/3.PNG"
                       alt="certificate"
                       class="w-full h-auto transition-transform duration-500 group-hover:scale-110"
                     />
@@ -516,14 +554,13 @@
                       class="layer absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-t from-cyan-400 via-cyan-200 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-4"
                     >
                       <h5 class="text-black text-xl font-semibold mb-4">
-                        JavaScript
+                        Tailwind CSS & Front-end Project 
                       </h5>
                       <p class="text-black text-sm mb-4">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing
-                        elit. Tenetur vero sapiente itaque cupiditate.
+                        Designed and developed a responsive front-end project using Tailwind CSS, implementing utility-first styling for clean and efficient design.
                       </p>
                       <a
-                        href="#"
+                        href="https://verified.sertifier.com/en/verify/06860071118802/"
                         class="bg-white rounded-full w-12 h-12 flex items-center justify-center text-pink-500 hover:bg-pink-500 hover:text-white transition"
                       >
                         <i class="bx bx-link-external text-2xl"></i>
@@ -536,7 +573,7 @@
                     class="swiper-slide group overflow-hidden rounded-lg cursor-pointer"
                   >
                     <img
-                      src="./images/certificate.PNG"
+                      src="./images/4.PNG"
                       alt="certificate"
                       class="w-full h-auto transition-transform duration-500 group-hover:scale-110"
                     />
@@ -544,14 +581,13 @@
                       class="layer absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-t from-cyan-400 via-cyan-200 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-4"
                     >
                       <h5 class="text-black text-xl font-semibold mb-4">
-                        JavaScript
+                        Dynamic Web Design
                       </h5>
                       <p class="text-black text-sm mb-4">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing
-                        elit. Tenetur vero sapiente itaque cupiditate.
+                        Achieved the Dynamic Web Design Certificate, showcasing expertise in creating responsive and interactive web designs using modern tools and technologies.
                       </p>
                       <a
-                        href="#"
+                        href="https://verified.sertifier.com/en/verify/48898600878417/"
                         class="bg-white rounded-full w-12 h-12 flex items-center justify-center text-pink-500 hover:bg-pink-500 hover:text-white transition"
                       >
                         <i class="bx bx-link-external text-2xl"></i>
@@ -564,7 +600,7 @@
                     class="swiper-slide group overflow-hidden rounded-lg cursor-pointer"
                   >
                     <img
-                      src="./images/certificate.PNG"
+                      src="./images/5.PNG"
                       alt="certificate"
                       class="w-full h-auto transition-transform duration-500 group-hover:scale-110"
                     />
@@ -572,14 +608,13 @@
                       class="layer absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-t from-cyan-400 via-cyan-200 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-4"
                     >
                       <h5 class="text-black text-xl font-semibold mb-4">
-                        JavaScript
+                       React JS Foundations 
                       </h5>
                       <p class="text-black text-sm mb-4">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing
-                        elit. Tenetur vero sapiente itaque cupiditate.
+                        Validated core competencies in React concepts, including JSX, state management, and lifecycle methods, with hands-on project experience.
                       </p>
                       <a
-                        href="#"
+                        href="https://verified.sertifier.com/en/verify/56552354450837/"
                         class="bg-white rounded-full w-12 h-12 flex items-center justify-center text-pink-500 hover:bg-pink-500 hover:text-white transition"
                       >
                         <i class="bx bx-link-external text-2xl"></i>
@@ -601,11 +636,11 @@
 
       <!-- section 6 contact  -->
       <section
-        class="contact mt-32 px-8 lg:grid lg:grid-cols-2 gap-12"
+        class="contact p-8 md:grid md:grid-cols-2 gap-12"
         id="contact"
       >
         <div class="contact-text">
-          <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-center">
+          <h2 class="font-medium text-5xl lg:text-[60px] text-center">
             Contact <span class="text-[#00eeff]">Me</span>
           </h2>
           <h4
@@ -616,8 +651,7 @@
           <p
             class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-400 mb-6"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sunt
-            dolorum excepturi. Quis, blanditiis architecto!
+          Ready to turn your ideas into reality? Let's connect and create something amazing together!
           </p>
           <ul class="contact-list space-y-4 mb-8">
             <li class="flex items-center space-x-2 text-gray-300">
@@ -630,43 +664,67 @@
             </li>
           </ul>
           <div class="contact-icons flex space-x-4 mt-4">
-            <a href="#" class="icon bg-transparent">
+            <a
+              href="mailto:techdhruvinpatel@gmail.com"
+              target="_blank"
+              class="icon bg-transparent"
+            >
               <i class="bx bxl-gmail"></i>
             </a>
-            <a href="#" class="icon bg-transparent">
-              <i class="bx bxl-twitter"></i>
+            <a
+              href="https://www.instagram.com/db._patel_official"
+              target="_blank"
+              class="icon bg-transparent"
+            >
+              <i class="bx bxl-instagram"></i>
             </a>
-            <a href="#" class="icon bg-transparent">
+            <a
+              href="https://www.linkedin.com/in/dhruvinpatel1407"
+              target="_blank"
+              class="icon bg-transparent"
+            >
               <i class="bx bxl-linkedin"></i>
             </a>
-            <a href="#" class="icon bg-transparent">
+            <a
+              href="https://github.com/dhruvinpatel1407"
+              target="_blank"
+              class="icon bg-transparent"
+            >
               <i class="bx bxl-github"></i>
             </a>
           </div>
         </div>
 
         <div class="contact-form">
-          <form action="">
+          <form action="" id="contact-form">
             <input
               type="text"
+              id="name"
+              name="name"
               placeholder="Enter Your Name"
               required
               class="input-field"
             />
             <input
               type="email"
+              id="email"
+              name="email"
               placeholder="Enter Your Email"
               required
               class="input-field"
             />
             <input
               type="text"
+              id="subject"
+              name="subject"
               placeholder="Enter Your Subject"
               required
               class="input-field"
             />
             <textarea
               placeholder="Enter Your Message"
+              id="message"
+              name="message"
               required
               class="textarea-field"
             ></textarea>

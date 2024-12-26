@@ -1,44 +1,59 @@
-const hamburger = document.getElementById('hamburger');
-const sideMenu = document.getElementById('side-menu');
-const menuLinks = document.querySelectorAll('#side-menu nav a'); // Select all menu links
+// Navbar Code
+const hamburger = document.getElementById("hamburger");
+const sideMenu = document.getElementById("side-menu");
+const menuLinks = document.querySelectorAll("#side-menu nav a");
 
 // Toggle the side menu
 const toggleMenu = () => {
-  if (sideMenu.classList.contains('-translate-x-full')) {
-    sideMenu.classList.remove('-translate-x-full');
-    sideMenu.classList.add('translate-x-0');
+  if (sideMenu.classList.contains("-translate-x-full")) {
+    sideMenu.classList.remove("-translate-x-full");
+    sideMenu.classList.add("translate-x-0");
   } else {
-    sideMenu.classList.remove('translate-x-0');
-    sideMenu.classList.add('-translate-x-full');
+    sideMenu.classList.remove("translate-x-0");
+    sideMenu.classList.add("-translate-x-full");
   }
 };
 
-// Open or close the side menu when hamburger is clicked
-hamburger.addEventListener('click', toggleMenu);
 
-// Close the side menu when any menu link is clicked
-menuLinks.forEach(link => {
-  link.addEventListener('click', toggleMenu);
+hamburger.addEventListener("click", toggleMenu);
+
+
+menuLinks.forEach((link) => {
+  link.addEventListener("click", toggleMenu);
+});
+
+// code for automatic text display
+var typed = new Typed(".text", {
+  strings: ["Frontend Developer", "Backend Developer ", "Agriculture Engineer"],
+  typeSpeed: 100,
+  backSpeed: 100,
+  backDelay: 1000,
+  loop: true,
 });
 
 
-var typed = new Typed(".text", {
-    strings : ["Frontend Developer","Backend Developer ", "Agriculture Engineer"],
-    typeSpeed : 100,
-    backSpeed : 100,
-    backDelay : 1000,
-    loop :  true,
+// code for read more button
+const readMoreBtn = document.getElementById("readMoreBtn");
+const moreText = document.getElementById("moreText");
 
-})
+readMoreBtn.addEventListener("click", () => {
+  if (moreText.classList.contains("hidden")) {
+    moreText.classList.remove("hidden");
+    readMoreBtn.textContent = "Read Less";
+  } else {
+    moreText.classList.add("hidden");
+    readMoreBtn.textContent = "Read More";
+  }
+});
 
-
+// code for carousel
 const swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 30,
   loop: true,
   autoplay: {
-    delay: 3000, // Change slides every 3 seconds
-    disableOnInteraction: false, // Keeps autoplay active even after user interaction
+    delay: 3000, 
+    disableOnInteraction: false, 
   },
   pagination: {
     el: ".swiper-pagination",
@@ -52,8 +67,30 @@ const swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
   breakpoints: {
-    640: { slidesPerView: 1 }, // Small screens
-    768: { slidesPerView: 2 }, // Medium screens
-    1024: { slidesPerView: 3 }, // Large screens
+    640: { slidesPerView: 1 },
+    768: { slidesPerView: 2 }, 
+    1024: { slidesPerView: 3 }, 
   },
 });
+
+
+// code for contact form 
+emailjs.init("HMY0KmePKO1pXLorY");
+
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    emailjs.sendForm("service_mh5vbyc", "template_wv2ec0s", this).then(
+      function (response) {
+        console.log("Success!", response);
+        alert("Message sent successfully!");
+        document.getElementById("contact-form").reset();
+      },
+      function (error) {
+        console.error("Failed...", error);
+        alert("Failed to send message. Please try again.");
+      }
+    );
+  });
