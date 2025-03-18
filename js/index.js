@@ -14,9 +14,7 @@ const toggleMenu = () => {
   }
 };
 
-
 hamburger.addEventListener("click", toggleMenu);
-
 
 menuLinks.forEach((link) => {
   link.addEventListener("click", toggleMenu);
@@ -30,7 +28,6 @@ var typed = new Typed(".text", {
   backDelay: 1000,
   loop: true,
 });
-
 
 // code for read more button
 const readMoreBtn = document.getElementById("readMoreBtn");
@@ -52,8 +49,8 @@ const swiper = new Swiper(".mySwiper", {
   spaceBetween: 30,
   loop: true,
   autoplay: {
-    delay: 3000, 
-    disableOnInteraction: false, 
+    delay: 3000,
+    disableOnInteraction: false,
   },
   pagination: {
     el: ".swiper-pagination",
@@ -68,29 +65,52 @@ const swiper = new Swiper(".mySwiper", {
   },
   breakpoints: {
     640: { slidesPerView: 1 },
-    768: { slidesPerView: 2 }, 
-    1024: { slidesPerView: 3 }, 
+    768: { slidesPerView: 2 },
+    1024: { slidesPerView: 3 },
   },
 });
 
+function showToast(message, type = "success") {
+  const toast = document.getElementById("toast");
+  const toastContent = document.getElementById("toastContent");
+  const toastMessage = document.getElementById("toastMessage");
 
-// code for contact form 
-emailjs.init("HMY0KmePKO1pXLorY");
+  // Set the message
+  toastMessage.textContent = message;
+
+  // Set the class based on type
+  toastContent.className = `toast-content ${type}`;
+
+  // Show the toast
+  toast.style.display = "block";
+
+  // Hide the toast after 3 seconds
+  setTimeout(() => {
+    toast.style.display = "none";
+  }, 3000);
+}
+
+// code for contact form
+emailjs.init(window.Config.EMAILJS_PUBLIC_KEY);
 
 document
   .getElementById("contact-form")
   .addEventListener("submit", function (event) {
     event.preventDefault();
 
-    emailjs.sendForm("service_mh5vbyc", "template_wv2ec0s", this).then(
-      function (response) {
-        console.log("Success!", response);
-        alert("Message sent successfully!");
-        document.getElementById("contact-form").reset();
-      },
-      function (error) {
-        console.error("Failed...", error);
-        alert("Failed to send message. Please try again.");
-      }
-    );
+    emailjs
+      .sendForm(
+        window.Config.EMAILJS_SERVICE_ID,
+        window.Config.EMAILJS_TEMPLATE_ID,
+        this
+      )
+      .then(
+        function (response) {
+          showToast("Message sent successfully!", "success");
+          document.getElementById("contact-form").reset();
+        },
+        function (error) {
+          showToast("Failed to send message. Please try again.", "error");
+        }
+      );
   });

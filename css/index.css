@@ -129,25 +129,28 @@ body {
   width: 90%;
 }
 .progress-line.css span {
-  width: 85%;
+  width: 87%;
 }
 .progress-line.javascript span {
-  width: 70%;
+  width: 85%;
 }
 .progress-line.react span {
-  width: 65%;
+  width: 85%;
 }
 .progress-line.redux span {
   width: 80%;
 }
-.progress-line.next span {
-  width: 70%;
+.progress-line.node span {
+  width: 85%;
 }
-.progress-line.tailwind span {
+.progress-line.express span {
+  width: 90%;
+}
+.progress-line.mongo span {
   width: 90%;
 }
 .progress-line.github span {
-  width: 85%;
+  width: 90%;
 }
 .progress-line span::after {
   position: absolute;
@@ -165,25 +168,28 @@ body {
   content: "90%";
 }
 .progress-line.css span::after {
-  content: "85%";
+  content: "87%";
 }
 .progress-line.javascript span::after {
-  content: "70%";
+  content: "85%";
 }
 .progress-line.react span::after {
-  content: "65%";
+  content: "85%";
 }
 .progress-line.redux span::after {
   content: "80%";
 }
-.progress-line.next span::after {
-  content: "70%";
+.progress-line.node span::after {
+  content: "85%";
 }
-.progress-line.tailwind span::after {
+.progress-line.express span::after {
+  content: "90%";
+}
+.progress-line.mongo span::after {
   content: "90%";
 }
 .progress-line.github span::after {
-  content: "85%";
+  content: "90%";
 }
 .progress-line span::before {
   content: "";
@@ -273,12 +279,12 @@ body {
 }
 @keyframes animate-path2 {
   100% {
-    stroke-dashoffset: 175;
+    stroke-dashoffset: 75;
   }
 }
 @keyframes animate-path3 {
   100% {
-    stroke-dashoffset: 125;
+    stroke-dashoffset: 100;
   }
 }
 @keyframes animate-path4 {
@@ -288,12 +294,12 @@ body {
 }
 @keyframes animate-path5 {
   100% {
-    stroke-dashoffset: 175;
+    stroke-dashoffset: 125;
   }
 }
 @keyframes animate-path6 {
   100% {
-    stroke-dashoffset: 153;
+    stroke-dashoffset: 75;
   }
 }
 .radial-bar .percentage {
@@ -543,5 +549,61 @@ border-radius: 0.5rem;
   100% {
     transform: translateY(0px);
     opacity: 1;
+  }
+}
+
+
+/* Custom styles for Technical Stack */
+.tech-category {
+  margin-bottom: 2rem;
+}
+
+.tech-category h2 {
+  font-size: 1.25rem; /* Size for category titles */
+  color: #00eeff; /* Optional color for category titles */
+  text-decoration: underline;
+}
+
+.tech-category p {
+  font-size: 1rem; /* Adjust text size for technologies */
+  color: #fff; /* White color for text */
+  text-align: center;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 640px) {
+  .tech-category p {
+    font-size: 0.9rem; /* Slightly smaller font size on mobile */
+  }
+}
+
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: none;
+}
+
+.toast-content {
+  background: #4CAF50;  /* Success color */
+  color: white;
+  padding: 15px 25px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  animation: slideIn 0.3s ease-out;
+}
+
+.error {
+  background: #f44336;  /* Error color */
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateX(100%);
+  }
+  to {
+      transform: translateX(0);
   }
 }
