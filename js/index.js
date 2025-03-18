@@ -91,7 +91,7 @@ function showToast(message, type = "success") {
 }
 
 // code for contact form
-emailjs.init(window.Config.EMAILJS_PUBLIC_KEY);
+emailjs.init('HMY0KmePKO1pXLorY');
 
 document
   .getElementById("contact-form")
@@ -100,8 +100,8 @@ document
 
     emailjs
       .sendForm(
-        window.Config.EMAILJS_SERVICE_ID,
-        window.Config.EMAILJS_TEMPLATE_ID,
+        'service_wtf47eo',
+        'template_wv2ec0s',
         this
       )
       .then(
