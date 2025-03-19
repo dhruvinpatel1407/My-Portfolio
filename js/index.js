@@ -22,7 +22,7 @@ menuLinks.forEach((link) => {
 
 // code for automatic text display
 var typed = new Typed(".text", {
-  strings: ["Frontend Developer", "Backend Developer ", "Agriculture Engineer"],
+  strings: ["Full Stack Developer", "MERN Stack Developer ", "Agriculture Engineer"],
   typeSpeed: 100,
   backSpeed: 100,
   backDelay: 1000,
@@ -100,7 +100,7 @@ document
 
     emailjs
       .sendForm(
-        'service_wtf47eo',
+        'service_mh5vbyc',
         'template_wv2ec0s',
         this
       )

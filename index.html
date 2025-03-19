@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfolio of Dhruvin Patel - Full Stack Developer">
-    <meta name="author" content="Dhruvin Patel">
+    <meta
+      name="description"
+      content="Portfolio of Dhruvin Patel - Full Stack Developer"
+    />
+    <meta name="author" content="Dhruvin Patel" />
     <title>DB PATEL</title>
     <!-- link for css file -->
     <link rel="stylesheet" href="./css/index.css" />
@@ -29,7 +32,7 @@
       type="text/javascript"
       src="https://cdn.emailjs.com/dist/email.min.js"
     ></script>
-    <script src="config.js"></script>
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
@@ -93,7 +96,7 @@
       <!-- Side Menu for Mobile -->
       <div
         id="side-menu"
-        class="fixed z-10 inset-0 bg-gray-800 bg-opacity-75 transform -translate-x-full transition-transform duration-300 ease-in-out p-6 lg:hidden"
+        class="fixed z-10 inset-0 bg-gray-800 bg-opacity-90 transform -translate-x-full transition-transform duration-300 ease-in-out p-6 lg:hidden"
       >
         <nav class="flex flex-col text-center space-y-6 mt-16">
           <a
@@ -188,7 +191,11 @@
                 ><i class="bx bxl-github"></i
               ></a>
             </div>
-            <a href="https://drive.google.com/file/d/1ZmFsSFSu0uVgZeiUKboIabVMQTvSFGnm/view?usp=sharing" class="btn-box">Download CV</a>
+            <a
+              href="https://drive.google.com/file/d/1ZmFsSFSu0uVgZeiUKboIabVMQTvSFGnm/view?usp=sharing"
+              class="btn-box"
+              >Download CV</a
+            >
           </div>
         </div>
       </section>
@@ -225,7 +232,7 @@
                 and back-end technologies. Through this course, I have learned
                 to work with languages such as HTML, CSS, JavaScript, and
                 frameworks like React and Node.js. I have also developed a
-                strong understanding of databases like MongoDB and MySQL, as
+                strong understanding of databases like MongoDB and MariaDB, as
                 well as version control systems like Git. My hands-on projects
                 have allowed me to build dynamic, user-friendly websites and
                 applications, enhancing my problem-solving skills and technical
@@ -312,7 +319,7 @@
                 </div>
               </div>
               <div class="bar flex items-center space-x-4 mb-6">
-                <i class="bx bxl-nodejs text-blue-500 text-3xl"></i>
+                <i class="bx bxl-nodejs text-green-500 text-3xl"></i>
                 <div class="info">
                   <span>NodeJS</span>
                 </div>
@@ -441,73 +448,113 @@
           </div>
 
           <!-- Technical stack used   -->
-          <div
-            class="bg-gray-800 p-6 w-full rounded-lg shadow-md lg:m-12 sm:m-4 mt-4"
-          >
-            <h1 class="heading1 text-2xl text-center underline mb-6">
-              Technical Stack
-            </h1>
-            <ul>
-              <!-- Languages Section -->
-              <li class="tech-category mb-2 ms-12">
-                <h2 class="text-xl inline-block text-center underline mb-4">
-                  Languages :
-                </h2>
-                <p class="text-center inline-block">JavaScript, HTML, CSS</p>
-              </li>
+          <div class="w-full mx-12 mb-6 mt-8">
+            <h1 class="heading1 text-2xl underline mb-6">Technical Stack</h1>
 
-              <!-- Frameworks Section -->
-              <li class="tech-category mb-2 ms-12">
-                <h2 class="text-xl inline-block text-center underline mb-4">
-                  Frameworks :
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8"
+            >
+              <!-- Languages Card -->
+              <div
+                class="bg-gray-700 p-6 rounded-lg hover:transform hover:scale-105 transition-transform"
+              >
+                <h2
+                  class="text-lg font-semibold text-[#0ef] mb-4 border-b border-gray-600"
+                >
+                  Languages
                 </h2>
-                <p class="text-center inline-block">
-                  ReactJS, NextJS, Redux, NodeJS, ExpressJS
-                </p>
-              </li>
+                <div class="space-y-2">
+                  <span class="text-gray-200">JavaScript, </span>
+                  <span class="text-gray-200">HTML, </span>
+                  <span class="text-gray-200">CSS </span>
+                </div>
+              </div>
 
-              <!-- UI Libraries Section -->
-              <li class="tech-category mb-2 ms-12">
-                <h2 class="text-xl inline-block text-center underline mb-4">
-                  UI Libraries :
+              <!-- Frameworks Card -->
+              <div
+                class="bg-gray-700 p-6 rounded-lg hover:transform hover:scale-105 transition-transform"
+              >
+                <h2
+                  class="text-lg font-semibold text-[#0ef] mb-4 border-b border-gray-600"
+                >
+                  Frameworks
                 </h2>
-                <p class="text-center inline-block">
-                  Tailwind CSS, Bootstrap, Material UI
-                </p>
-              </li>
+                <div class="space-y-2">
+                  <span class="text-gray-200">ReactJS, </span>
+                  <span class="text-gray-200">Next.js, </span>
+                  <span class="text-gray-200">Node.js, </span>
+                  <span class="text-gray-200">Express.js </span>
+                </div>
+              </div>
 
-              <!-- DataBase Section -->
-              <li class="tech-category mb-2 ms-12">
-                <h2 class="text-xl inline-block text-center underline mb-4">
-                  DataBases :
+              <!-- Databases Card -->
+              <div
+                class="bg-gray-700 p-6 rounded-lg hover:transform hover:scale-105 transition-transform"
+              >
+                <h2
+                  class="text-lg font-semibold mb-4 text-[#0ef] border-b border-gray-600"
+                >
+                  Databases
                 </h2>
-                <p class="text-center inline-block">MongoDB, MariaDB</p>
-              </li>
+                <div class="space-y-2">
+                  <span class="text-gray-200">MongoDB, </span>
+                  <span class="text-gray-200">MariaDB</span>
+                </div>
+              </div>
 
-              <li class="tech-category mb-2 ms-12">
-                <h2 class="text-xl inline-block text-center underline mb-4">
-                  Testing :
+              <!-- Testing Card -->
+              <div
+                class="bg-gray-700 p-6 rounded-lg hover:transform hover:scale-105 transition-transform"
+              >
+                <h2
+                  class="text-lg font-semibold mb-4 text-[#0ef] border-b border-gray-600"
+                >
+                  Testing
                 </h2>
-                <p class="text-center inline-block">
-                  Vitest, React Testing Library, Cypress(Basic)
-                </p>
-              </li>
+                <div class="space-y-2">
+                  <span class="text-gray-200">Vitest, </span>
+                  <span class="text-gray-200">React Testing Library, </span>
+                  <span class="text-gray-200">Cypress</span>
+                </div>
+              </div>
 
-              <!-- Version Control Section -->
-              <li class="tech-category mb-2 ms-12">
-                <h2 class="text-xl inline-block text-center underline mb-4">
-                  Version Control :
+              <!-- Hosting Card -->
+              <div
+                class="bg-gray-700 p-6 rounded-lg hover:transform hover:scale-105 transition-transform"
+              >
+                <h2
+                  class="text-lg font-semibold text-[#0ef] mb-4 border-b border-gray-600"
+                >
+                  Hosting
                 </h2>
-                <p class="text-center inline-block">Git, GitHub</p>
-              </li>
+                <div class="space-y-2">
+                  <span class="text-gray-200">Netlify, </span>
+                  <span class="text-gray-200">Vercel, </span>
+                  <span class="text-gray-200">Render</span>
+                </div>
+              </div>
 
-              <li class="tech-category mb-2 ms-12">
-                <h2 class="text-xl inline-block text-center underline mb-4">
-                  Hosting Services :
+              <!-- Version Control Card -->
+              <div
+                class="bg-gray-700 p-6 rounded-lg hover:transform hover:scale-105 transition-transform"
+              >
+                <h2
+                  class="text-lg font-semibold mb-4 text-[#0ef] border-b border-gray-600"
+                >
+                  Others
                 </h2>
-                <p class="text-center inline-block">Netlify, Vercel, Render</p>
-              </li>
-            </ul>
+                <div class="space-y-2">
+                  <span class="text-gray-200">TailwindCSS, </span>
+                  <span class="text-gray-200">BootStrap, </span>
+                  <span class="text-gray-200">Material UI, </span>
+                  <span class="text-gray-200">Jquery, </span>
+                  <span class="text-gray-200">REST API, </span>
+                  <span class="text-gray-200">Git, </span>
+                  <span class="text-gray-200">GitHub</span>
+                  
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -820,8 +867,10 @@
                         Coding Challanges
                       </h5>
                       <p class="text-black text-sm mb-4">
-                        Solved various JavaScript coding challenges, focusing on core programming concepts like functions, loops, arrays, and objects.    
-                        Practiced debugging and code optimization to enhance efficiency and readability. 
+                        Solved various JavaScript coding challenges, focusing on
+                        core programming concepts like functions, loops, arrays,
+                        and objects. Practiced debugging and code optimization
+                        to enhance efficiency and readability.
                       </p>
                       <a
                         href="https://verified.sertifier.com/en/verify/80445571514732/"
@@ -991,9 +1040,9 @@
 
     <div class="toast" id="toast">
       <div class="toast-content" id="toastContent">
-          <p id="toastMessage"></p>
+        <p id="toastMessage"></p>
       </div>
-  </div>
+    </div>
 
     <script src="./js/index.js"></script>
   </body>
